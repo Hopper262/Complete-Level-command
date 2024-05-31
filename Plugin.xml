@@ -1,0 +1,2 @@
+<plugin name="Complete Level command" version="1.0" description="Type 'complete_level()' in console" solo_lua="CompleteLevel.lua">
+</plugin>

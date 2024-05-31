@@ -1,0 +1,52 @@
+Complete Level command 1.0
+--------------------------
+by Hopper
+
+----------------------------------------------------------------
+DESCRIPTION:
+This Solo Lua plugin provides the function "complete_level()" in the Lua console. When called, it automatically completes the level's mission objectives, like exterminating enemies or exploring areas. Terminals will then display their "finished" text, making terminal testing easier.
+
+WARNING: This command may make the level impossible to finish by normal means. Only use it for testing completion-state behavior.
+
+----------------------------------------------------------------
+COMPATIBILITY:
+Marathon Infinity - Compatible
+Marathon 2: Durandal - Compatible
+Marathon - Not compatible
+Other Aleph One-compatible scenarios - Compatible
+
+----------------------------------------------------------------
+REQUIREMENTS:
+- Aleph One 1.2 (release 2016-06-19) or later
+
+----------------------------------------------------------------
+INSTALLATION:
+- Drag the downloaded .zip file, or the unzipped "Default HUD" folder, into the "Plugins" folder inside your Marathon 2, Marathon Infinity, or custom scenario folder. (Create a "Plugins" folder if you don't already have one.)
+- Launch Aleph One, and go to "Preferences", then "Environment", then "Plugins" make sure the plugin is listed as "Enabled". You can click on it to turn it on or off. Turn off any other solo Lua plugins.
+
+To use the command, start a solo game and bring up the Lua console (default key is backslash "\"), then type:
+
+    complete_level()
+
+and press Return. Progress messages or errors will be printed in the top left of the screen.
+
+To test your terminals, you can use the console command:
+
+    Players[0]:activate_terminal(0)
+
+Replace the last "0" with the terminal script number. For example, to check the "unfinished" and "finished" texts of terminal script 2:
+
+    Players[0]:activate_terminal(2)
+    complete_level()
+    Players[0]:activate_terminal(2)
+
+----------------------------------------------------------------
+CHANGELOG:
+
+v1.0:
+* Initial version
+
+----------------------------------------------------------------
+CONTACT:
+If you have any questions, comments or bugs to report, you can email me:
+- hopper@whpress.com
